@@ -1,0 +1,35 @@
+.contactList {
+  /*display: inline-block;*/
+  float: left;
+  overflow-y: scroll;
+  white-space: nowrap;
+  background-color: #e9e9e9;
+  max-height: 800px;
+  width: 20%;
+}
+
+/*.messages {
+  float: left;
+  max-width: 80%;
+  word-wrap: break-word
+}*/
+
+.otherMessages {
+  float: left;
+  max-width: 80%;
+  word-wrap: break-word
+}
+
+.myMessages {
+  background-color: #3c70c4;
+  border: 1px solid black;
+  color: white;
+  border-radius: 25px;
+  float: right;
+  max-width: 80%;
+  word-wrap: break-word
+}
+
+#contactAvatars_ID {
+  list-style-type: none;
+}
