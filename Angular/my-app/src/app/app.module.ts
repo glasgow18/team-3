@@ -7,11 +7,13 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
+import { DbcomComponent } from './dbcom/dbcom.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BannerComponent
+    BannerComponent,
+    DbcomComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
