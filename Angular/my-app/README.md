@@ -12,6 +12,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+Run `npm install -g @angular/cli` to install Angular.
+
+Run `npm install` in the src folder to build the node_modules folder. 
+
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
