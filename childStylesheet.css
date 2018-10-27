@@ -2,6 +2,11 @@
 .topnav {
     overflow: hidden;
     background-color: #e9e9e9;
+    border-radius: 5px;
+}
+
+.topnav img {
+    float: left;
 }
 
 /* Style the links inside the navigation bar */
@@ -34,4 +39,16 @@
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
+}
+
+.avatarSection {
+    margin-top : 5px;
+    padding : 10px;
+    float : left;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+}
+
+.avatarSection p {
+    margin-left : 50px;
 }
