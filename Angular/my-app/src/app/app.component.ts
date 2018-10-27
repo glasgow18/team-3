@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+
+export interface Item { name: string; flavour: string; }
 
 @Component({
     selector: 'app-root',
-    template: `
-        <ul>
-            <li *ngFor="let item of items | async">
-                <pre>{{ item | json }}</pre>
-            </li>
-        </ul>
-    `
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    public items: Observable<any[]>;
+    title = "Team3App";
+    private itemsCollection: AngularFirestoreCollection<Item>;
+    public items: Observable<Item[]>;
 
-    constructor(db: AngularFirestore) {
-        this.items = db.collection('/items').valueChanges();
+    constructor(private afs: AngularFirestore) {
+        this.itemsCollection = afs.collection<Item>('items');
+        this.items = this.itemsCollection.valueChanges(); 
     }
 }
 
