@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>
+    Messenging
+  </title>
+  <style>
+
+  .topSection {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+  .searchBar button[type="submit"] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 10px;
+    border: none;
+    font-size: 17px;
+  }
+
+  .searchBar input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;;
+  font-size: 17px;
+  }
+
+  </style>
+  <script src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
+</head>
+<body>
+  <div class="topSection">
+  <div class="searchBar">
+      <button id='userSearch_ID'type="submit"><i class="fa fa-search"></i></button>
+    <input id="searchBar_ID"type="text" placeholder="Search...">
+  </div>
+</div>
+<div>
+
+</div>
+  <script>
+  $(document).ready(function() {
+    $('#userSearch_ID').click(function() {
+      console.log($('#searchBar_ID').val());
+      $('#searchBar_ID').val(null);
+    });
+  });
+  </script>
+  <script>
+  </script>
+</body>
+</html>
