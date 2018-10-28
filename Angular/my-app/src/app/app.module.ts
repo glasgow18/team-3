@@ -10,10 +10,17 @@ import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
 import { ForumComponent } from './forum/forum.component';
 import { HomeComponent } from './home/home.component';
+import { ForumPLComponent } from './forumPL/forumPL.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
   {path: 'forum', component: ForumComponent},
+  {path: 'forum/aboutCancer', component: ForumPLComponent, data: {title : 'About Cancer'}},
+  {path: 'forum/treatment', component: ForumPLComponent, data: {title : 'Treatment'}},
+  {path: 'forum/support', component: ForumPLComponent, data: {title : 'Support'}},
+  {path: 'forum/advice', component: ForumPLComponent, data: {title : 'Advice'}},
+  {path: 'forum/hospitals', component: ForumPLComponent, data: {title : 'Hospitals'}},
+  {path: 'forum/casual', component: ForumPLComponent, data: {title : 'Casual'}},
 
   {path: '**', component: HomeComponent}
 ]
@@ -23,6 +30,7 @@ const appRoutes: Routes = [
     AppComponent,
     BannerComponent,
     ForumComponent,
+    ForumPLComponent,
     HomeComponent
   ],
   imports: [
