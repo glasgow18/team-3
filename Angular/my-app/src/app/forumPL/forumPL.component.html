@@ -2,7 +2,7 @@
     <h2>{{title}}</h2>
     <table>
         <tr *ngFor="let message of messages | async">
-            <th><a routerLink='forum/{{title}}/{{message.name}}'>{{ message.name }}</a></th>
+            <th><a routerLink='{{message.name}}'>{{ message.name }}</a></th>
         </tr>
     </table>
 </div>
