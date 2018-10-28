@@ -2,40 +2,15 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
   <title>
     Messenging
   </title>
   <style>
-
-  .topSection {
-    overflow: hidden;
-    background-color: #e9e9e9;
-  }
-  .searchBar button[type="submit"] {
-    float: right;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 10px;
-    border: none;
-    font-size: 17px;
-  }
-
-  .searchBar input[type=text] {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 10px;
-  border: 1px solid #ccc;;
-  font-size: 17px;
-  }
-
   </style>
   <script src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
 </head>
 <body>
   <div class="topSection">
-=======
   <link rel='stylesheet' href='MessengerStyling.css'>
   <title>
     Messenging
@@ -43,45 +18,23 @@
   <script src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
 </head>
 <body>
-  <!-- <div class="topSection">
->>>>>>> html
-  <div class="searchBar">
-      <button id='userSearch_ID'type="submit"><i class="fa fa-search"></i></button>
-    <input id="searchBar_ID"type="text" placeholder="Search...">
-  </div>
-<<<<<<< HEAD
-</div>
-<div>
-
-=======
-</div> -->
 <div class="container">
   <div class="contactList">
     <ul id='contactAvatars_ID'>
     </ul>
   </div>
   <div class='messages'>
-    <div class='otherMessages'>
-    </div>
-    <div class='myMessages'>
+    <table class='table'>
+
+    </table>
+    <div>
+      <input type="text" placeholder="Type message here..." class="submitinput">
+      <button type="submit" class="submitbutton">Send</button>
     </div>
   </div>
->>>>>>> html
 </div>
-  <script>
-  $(document).ready(function() {
-    $('#userSearch_ID').click(function() {
-      console.log($('#searchBar_ID').val());
-      $('#searchBar_ID').val(null);
-    });
-  });
-  </script>
-<<<<<<< HEAD
-=======
+  <script src="MessengerReceiver.js"></script>
   <script src='MessageDisplay.js'></script>
   <script src='contactListView.js'></script>
->>>>>>> html
-  <script>
-  </script>
 </body>
 </html>
