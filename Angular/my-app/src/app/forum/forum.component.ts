@@ -1,21 +1,26 @@
-import { Component } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit } from '@angular/core';
 
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
 
-export class Item { name: string; flavour: string; type: string }
+
+export class Document { name: string; }
+
 
 @Component({
-    selector: 'app-forum',
-    templateUrl: './forum.component.html',
-    styleUrls: ['./forum.component.css']
+  selector: 'app-forum',
+  templateUrl: './forum.component.html',
+  styleUrls: ['./forum.component.css']
 })
-export class ForumComponent {
-    private itemsCollection: AngularFirestoreCollection<Item>;
-    public items: Observable<Item[]>;
+export class ForumComponent implements OnInit {
+  private forums: AngularFirestoreCollection<Document>;
+  public forumArray: Observable<Document[]>;
 
-    constructor(private afs: AngularFirestore) {
-        this.itemsCollection = afs.collection<Item>('items');
-        this.items = this.itemsCollection.valueChanges(); 
-    }
+  constructor(private afs: AngularFirestore) { 
+    this.forums = afs.collection('forums');
+    this.forumArray = this.forums.valueChanges();
+  }
+  ngOnInit() {
+  }
+
 }

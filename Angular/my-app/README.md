@@ -16,6 +16,10 @@ Run `npm install -g @angular/cli` to install Angular.
 
 Run `npm install` in the my-app folder to build the node_modules folder. 
 
+Run `npm install jquery --save` to install jQuery
+
+Run `npm install @types/jquery --save-dev` to connect jQuery to Angular
+
 Run `ng s` to serve the project.
 
 ## Running unit tests

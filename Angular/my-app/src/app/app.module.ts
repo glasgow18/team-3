@@ -25,14 +25,8 @@ import * as $ from 'jquery';
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
   {path: 'forum', component: ForumComponent},
-  {path: 'forum/aboutCancer', component: ForumPLComponent, data: {title : 'About Cancer'}},
-  {path: 'forum/treatment', component: ForumPLComponent, data: {title : 'Treatment'}},
-  {path: 'forum/support', component: ForumPLComponent, data: {title : 'Support'}},
-  {path: 'forum/advice', component: ForumPLComponent, data: {title : 'Advice'}},
-  {path: 'forum/hospitals', component: ForumPLComponent, data: {title : 'Hospitals'}},
-  {path: 'forum/casual', component: ForumPLComponent, data: {title : 'Casual'}},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'messenger', component: MessengerComponent},
+  {path: 'forum/:title', component: ForumPLComponent},
+  {path: 'forum/:title/:thread', component: DbdelComponent},
 
   {path: '**', component: HomeComponent}
 ]
