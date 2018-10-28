@@ -47,7 +47,7 @@ export class MessengerComponent implements OnInit {
       row.appendTo(table);
       if(userMsg[i].user === "you") {
         var emptyEntry = $('<td>');
-        var messageRow = $('<td class="my">');
+        var messageRow = $('<td class=my>');
         messageRow.append(userMsg[i].message);
         emptyEntry.appendTo(row);
         messageRow.appendTo(row);
