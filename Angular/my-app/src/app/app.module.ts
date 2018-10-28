@@ -12,8 +12,8 @@ import { ForumComponent } from './forum/forum.component';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  {path: 'home', component: HomeComponent },
-  {path: 'forum', component: ForumComponent},
+  {path: '#home', component: HomeComponent },
+  {path: '#forum', component: ForumComponent},
 
   {path: '**', component: HomeComponent}
 ]
