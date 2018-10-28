@@ -8,11 +8,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
+import { DbcomComponent } from './dbcom/dbcom.component';
 import { ForumComponent } from './forum/forum.component';
 import { HomeComponent } from './home/home.component';
 import { ForumPLComponent } from './forumPL/forumPL.component';
 
 const appRoutes: Routes = [
+<<<<<<< HEAD
   {path: 'home', component: HomeComponent },
   {path: 'forum', component: ForumComponent},
   {path: 'forum/aboutCancer', component: ForumPLComponent, data: {title : 'About Cancer'}},
@@ -21,6 +23,10 @@ const appRoutes: Routes = [
   {path: 'forum/advice', component: ForumPLComponent, data: {title : 'Advice'}},
   {path: 'forum/hospitals', component: ForumPLComponent, data: {title : 'Hospitals'}},
   {path: 'forum/casual', component: ForumPLComponent, data: {title : 'Casual'}},
+=======
+  {path: '#home', component: HomeComponent },
+  {path: '#forum', component: ForumComponent},
+>>>>>>> 3e70d83856bad1ff5668821f89cdc8ac8351de27
 
   {path: '**', component: HomeComponent}
 ]
@@ -29,6 +35,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     BannerComponent,
+    DbcomComponent,
     ForumComponent,
     ForumPLComponent,
     HomeComponent
