@@ -18,6 +18,9 @@ import { ProbeComponent } from './probe/probe.component';
 import { DbdelComponent } from './dbdel/dbdel.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MessengerComponent } from './messenger/messenger.component';
+
+import * as $ from 'jquery';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
@@ -29,6 +32,7 @@ const appRoutes: Routes = [
   {path: 'forum/hospitals', component: ForumPLComponent, data: {title : 'Hospitals'}},
   {path: 'forum/casual', component: ForumPLComponent, data: {title : 'Casual'}},
   {path: 'profile', component: ProfileComponent},
+  {path: 'messenger', component: MessengerComponent},
 
   {path: '**', component: HomeComponent}
 ]
@@ -46,7 +50,8 @@ const appRoutes: Routes = [
     ProfileComponent,
     ProbeComponent,
     DbdelComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessengerComponent
   ],
   imports: [
     RouterModule.forRoot(
