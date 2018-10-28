@@ -14,6 +14,8 @@ import { ForumComponent } from './forum/forum.component';
 import { HomeComponent } from './home/home.component';
 import { ForumPLComponent } from './forumPL/forumPL.component';
 import { ForumPostComponent } from './forum-post/forum-post.component';
+import { ProbeComponent } from './probe/probe.component';
+import { DbdelComponent } from './dbdel/dbdel.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
@@ -36,7 +38,9 @@ const appRoutes: Routes = [
     ForumComponent,
     ForumPLComponent,
     HomeComponent,
-    ForumPostComponent
+    ForumPostComponent,
+    ProbeComponent,
+    DbdelComponent
   ],
   imports: [
     RouterModule.forRoot(

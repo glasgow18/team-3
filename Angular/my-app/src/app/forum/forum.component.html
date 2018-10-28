@@ -4,35 +4,37 @@
             <th>Topic</th>
         </tr>
         <tr>
-            <a href="/forum/aboutCancer"><td>About Cancer
+            <a routerLink="/forum/aboutCancer"><td>About Cancer
             <br><div class=lastPost>Last Post: </div></td></a>
         </tr>
         <tr>
-            <a href="/forum/treatment"><td>Treatment
+            <a routerLink="/forum/treatment"><td>Treatment
             <br><div class=lastPost>Last Post: </div></td></a>
         </tr>
         <tr>
-            <a href="/forum/support"><td>Support
+            <a routerLink="/forum/support"><td>Support
             <br><div class=lastPost>Last Post: </div></td></a>
         </tr>
         <tr>
-            <a href="/forum/advice"><td>Advice
+            <a routerLink="/forum/advice"><td>Advice
             <br><div class=lastPost>Last Post: </div></td></a>
         </tr>
         <tr>
-            <a href="/forumPL/hospitals"><td>Hospitals
+            <a routerLink="/forum/hospitals"><td>Hospitals
             <br><div class=lastPost>Last Post: </div></td></a>
         </tr>
         <tr>
-            <a href="/forum/casual"><td>Casual
+            <a routerLink="/forum/casual"><td>Casual
             <br><div class=lastPost>Last Post: </div></td></a>
         </tr>
     </table>
 </div>
 <ul>
     <li *ngFor="let item of items | async">
-        <h1>{{ item.name }}</h1>
-        <h2>{{ item.flavour }}</h2>
+        <p>{{ item.name }}</p>
+        <p>{{ item.flavour }}</p>
     </li>
 </ul>
 <app-dbcom></app-dbcom>
+<app-dbdel></app-dbdel>
+<app-probe></app-probe>
