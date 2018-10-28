@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { ForumPLComponent } from './forumPL/forumPL.component';
 import { ForumPostComponent } from './forum-post/forum-post.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   {path: 'forum/advice', component: ForumPLComponent, data: {title : 'Advice'}},
   {path: 'forum/hospitals', component: ForumPLComponent, data: {title : 'Hospitals'}},
   {path: 'forum/casual', component: ForumPLComponent, data: {title : 'Casual'}},
+  {path: 'profile', component: ProfileComponent},
 
   {path: '**', component: HomeComponent}
 ]
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     ForumPLComponent,
     HomeComponent,
     ForumPostComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProfileComponent
   ],
   imports: [
     RouterModule.forRoot(
