@@ -1,0 +1,9 @@
+.sectionDiv {
+    margin-top : 5px;
+    margin-left: 5px;
+    padding : 10px;
+    float : left;
+    background-color: #fffffc;
+    border-radius: 5px;
+    width: 87.1%;
+}
