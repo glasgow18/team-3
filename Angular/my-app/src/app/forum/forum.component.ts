@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
-
+export class Item { name: string; flavour: string; type: string}
 export class Document { name: string; }
 
 
