@@ -21,7 +21,3 @@ table {
 th {
     text-align: left;
 }
-
-tr:not(:first-child):hover {
-    background-color: white; 
-}

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Item } from '../forum/forum.component';
 
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
@@ -11,20 +10,28 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 })
 export class DbcomComponent implements OnInit {
 
-  item: Item = {
-    name: "",
-    type: "",
-    flavour: ""
-  };
+    item : Item = {
+        name : "",
+        flavour : "",
+        type : ""
+    }; 
 
-  private itemsCollection: AngularFirestoreCollection<Item>;
+    private itemsCollection: AngularFirestoreCollection<Item>;
 
     constructor(private afs: AngularFirestore) {
         this.itemsCollection = afs.collection<Item>('items');
     }
 
-  ngOnInit() {
-  }
+    addPost() {
+        // const id = this.afs.createId();
+        // const item: Item = { name, flavour, type };
+        // this.itemsCollection.doc(id).set(item);
+        this.itemsCollection.add(this.item);
+    }
+
+    ngOnInit() {
+
+    }
 
   submitFood() {
     this.itemsCollection.add(this.item);
