@@ -26,10 +26,11 @@ export class DbcomComponent implements OnInit {
         this.items = this.itemsCollection.valueChanges();
     }
 
-    addPost(food: string, flavour: string, type: string) {
-        const id = this.afs.createId();
-        const item: Item = { name, flavour, type };
-        this.itemsCollection.doc(id).set(item);
+    addPost() {
+        // const id = this.afs.createId();
+        // const item: Item = { name, flavour, type };
+        // this.itemsCollection.doc(id).set(item);
+        this.itemsCollection.add(this.item);
     }
 
     ngOnInit() {
