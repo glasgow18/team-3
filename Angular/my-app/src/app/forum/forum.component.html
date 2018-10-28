@@ -3,35 +3,9 @@
         <tr>
             <th>Topic</th>
         </tr>
-        <tr>
-            <a routerLink="/forum/aboutCancer"><td>About Cancer
-            <br><div class=lastPost>Last Post: </div></td></a>
-        </tr>
-        <tr>
-            <a routerLink="/forum/treatment"><td>Treatment
-            <br><div class=lastPost>Last Post: </div></td></a>
-        </tr>
-        <tr>
-            <a routerLink="/forum/support"><td>Support
-            <br><div class=lastPost>Last Post: </div></td></a>
-        </tr>
-        <tr>
-            <a routerLink="/forum/advice"><td>Advice
-            <br><div class=lastPost>Last Post: </div></td></a>
-        </tr>
-        <tr>
-            <a routerLink="/forum/hospitals"><td>Hospitals
-            <br><div class=lastPost>Last Post: </div></td></a>
-        </tr>
-        <tr>
-            <a routerLink="/forum/casual"><td>Casual
+        <tr *ngFor="let forum of forumArray | async">
+            <a routerLink="/forum/{{ forum.name }}"><td>{{ forum.name }}
             <br><div class=lastPost>Last Post: </div></td></a>
         </tr>
     </table>
 </div>
-<!--<ul>
-    <li *ngFor="let item of items | async">
-        <p>{{ item.name }}</p>
-        <p>{{ item.flavour }}</p>
-    </li>
-</ul>-->

@@ -1,1 +1,3 @@
-<button (click)="deleteFood()">Delete Food Item</button>
+<div *ngFor="let message of messages | async">
+  <p> {{ message.name }}</p>
+</div>

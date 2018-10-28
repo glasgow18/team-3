@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from '../forum/forum.component';
+
+import { ActivatedRoute } from '@angular/router';
+
 
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
+
+export class Item { name: string; type: string; flavour: string}
 
 @Component({
   selector: 'app-dbdel',
@@ -9,24 +14,32 @@ import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection 
   styleUrls: ['./dbdel.component.css']
 })
 export class DbdelComponent implements OnInit {
-  private itemsCollection: AngularFirestoreCollection<Item>;
-  private itemDocument: AngularFirestoreDocument<Item>;
+  private forums: AngularFirestoreCollection<Document>;
+  private forum: AngularFirestoreDocument<Document>;
+  private threads: AngularFirestoreCollection<Document>;
+  private threadB: AngularFirestoreDocument<Document>;
+  private specificThread: AngularFirestoreCollection<Document>;
+  public messages: Observable<Document[]>;
+  public title = "";
+  public thread = "";
 
-  constructor(private afs: AngularFirestore) {
-    this.itemsCollection = afs.collection<Item>('items');
+  constructor(private route: ActivatedRoute, private afs: AngularFirestore) {
+      this.forums = afs.collection('forums');
+
   }
 
-  deleteFood() {
-    var i = 0;
-    for(var doc in this.itemsCollection) {
-      this.itemDocument = this.itemsCollection.doc(doc);
-      this.itemDocument.delete;
-      console.log(doc);
-    }
-    this.itemDocument.delete();
-  }
+  ngOnInit(): void {
+    this.getTitle();
+    console.log(this.title, this.thread);
+    this.forum = this.forums.doc(this.title);
+    this.threads = this.forum.collection('threads');
+    this.threadB = this.threads.doc(this.thread);
+    this.specificThread = this.threadB.collection('messages');
+    this.messages = this.specificThread.valueChanges();
+}
 
-  ngOnInit() {
-  }
-
+getTitle(): void {
+  this.title = this.route.snapshot.paramMap.get('title');
+  this.thread = this.route.snapshot.paramMap.get('thread');
+}
 }
