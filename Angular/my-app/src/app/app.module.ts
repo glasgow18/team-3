@@ -12,6 +12,7 @@ import { DbcomComponent } from './dbcom/dbcom.component';
 import { ForumComponent } from './forum/forum.component';
 import { HomeComponent } from './home/home.component';
 import { ForumPLComponent } from './forumPL/forumPL.component';
+import { ForumPostComponent } from './forum-post/forum-post.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     DbcomComponent,
     ForumComponent,
     ForumPLComponent,
-    HomeComponent
+    HomeComponent,
+    ForumPostComponent
   ],
   imports: [
     RouterModule.forRoot(
