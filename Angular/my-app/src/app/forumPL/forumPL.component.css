@@ -18,18 +18,10 @@ table {
     table-layout: auto;
 }
 
-td {
-    text-align: center;
-}
-
-td {
-    max-width: 100%;
+th {
+    text-align: left;
 }
 
 tr:not(:first-child):hover {
     background-color: white; 
-}
-
-a {
-    text-decoration:none;
 }

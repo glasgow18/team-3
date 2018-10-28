@@ -1,0 +1,21 @@
+img {
+    vertical-align: middle;
+    width: 30px;
+}
+
+.sectionDiv {
+    margin-top : 5px;
+    margin-left: 5px;
+    padding : 10px;
+    float : left;
+    background-color: #fffffc;
+    border-radius: 5px;
+    width: 87.1%;
+}
+
+table {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 5px
+}

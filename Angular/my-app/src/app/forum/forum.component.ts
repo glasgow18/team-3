@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 
-export interface Item { name: string; flavour: string; }
+export class Item { name: string; flavour: string; type: string }
 
 @Component({
     selector: 'app-forum',
