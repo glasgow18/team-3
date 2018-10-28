@@ -27,6 +27,8 @@ const appRoutes: Routes = [
   {path: 'forum', component: ForumComponent},
   {path: 'forum/:title', component: ForumPLComponent},
   {path: 'forum/:title/:thread', component: DbdelComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'messenger', component: MessengerComponent},
 
   {path: '**', component: HomeComponent}
 ]
