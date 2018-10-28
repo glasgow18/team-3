@@ -42,14 +42,11 @@ const appRoutes: Routes = [
     ForumPLComponent,
     HomeComponent,
     ForumPostComponent,
-<<<<<<< HEAD
     DashboardComponent,
-    ProfileComponent
-=======
+    ProfileComponent,
     ProbeComponent,
     DbdelComponent,
     DashboardComponent
->>>>>>> 778eb0f04c671afb2fa84a91cb16580a3001ec91
   ],
   imports: [
     RouterModule.forRoot(
