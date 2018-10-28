@@ -17,6 +17,10 @@ import { ForumPostComponent } from './forum-post/forum-post.component';
 import { ProbeComponent } from './probe/probe.component';
 import { DbdelComponent } from './dbdel/dbdel.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MessengerComponent } from './messenger/messenger.component';
+
+import * as $ from 'jquery';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
@@ -36,9 +40,12 @@ const appRoutes: Routes = [
     ForumPLComponent,
     HomeComponent,
     ForumPostComponent,
+    DashboardComponent,
+    ProfileComponent,
     ProbeComponent,
     DbdelComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessengerComponent
   ],
   imports: [
     RouterModule.forRoot(
