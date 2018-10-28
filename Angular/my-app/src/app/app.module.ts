@@ -14,6 +14,8 @@ import { ForumComponent } from './forum/forum.component';
 import { HomeComponent } from './home/home.component';
 import { ForumPLComponent } from './forumPL/forumPL.component';
 import { ForumPostComponent } from './forum-post/forum-post.component';
+import { ProbeComponent } from './probe/probe.component';
+import { DbdelComponent } from './dbdel/dbdel.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 
@@ -40,8 +42,14 @@ const appRoutes: Routes = [
     ForumPLComponent,
     HomeComponent,
     ForumPostComponent,
+<<<<<<< HEAD
     DashboardComponent,
     ProfileComponent
+=======
+    ProbeComponent,
+    DbdelComponent,
+    DashboardComponent
+>>>>>>> 778eb0f04c671afb2fa84a91cb16580a3001ec91
   ],
   imports: [
     RouterModule.forRoot(
